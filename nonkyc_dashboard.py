@@ -488,13 +488,6 @@ wcol1.metric(
 wcol2.metric("Capital inicial", f"${wallet['initial_capital']:,.2f}")
 wcol3.metric("Órdenes limit activas", f"{len(wallet['active_orders'])}")
 
-st.markdown("**Historial de operaciones simuladas**")
-if wallet["trade_history"]:
-    trades_df = pd.DataFrame(wallet["trade_history"]).sort_values("time", ascending=False)
-    st.dataframe(trades_df, width="stretch")
-else:
-    st.caption("Todavía no se ha simulado ninguna operación BUY/SELL.")
-
 st.divider()
 
 # --- Panel por par: precio + acumulación/PnL + gráfico, todo junto -----------
@@ -550,6 +543,15 @@ for col, symbol in zip(pair_cols, SYMBOLS):
             )
             chart = build_price_chart(symbol_df, SYMBOL_COLORS.get(symbol, "#2fb3a3"), entry_price, symbol_orders)
             st.altair_chart(chart, width="stretch")
+
+st.divider()
+
+st.markdown("**Historial de operaciones simuladas**")
+if wallet["trade_history"]:
+    trades_df = pd.DataFrame(wallet["trade_history"]).sort_values("time", ascending=False)
+    st.dataframe(trades_df, width="stretch")
+else:
+    st.caption("Todavía no se ha simulado ninguna operación BUY/SELL.")
 
 st.divider()
 
