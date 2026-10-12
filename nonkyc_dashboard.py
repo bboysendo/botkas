@@ -244,6 +244,51 @@ def build_price_chart(
 # --------------------------------------------------------------------------- #
 
 st.set_page_config(page_title="KASMAN · NonKYC Bot Dashboard", page_icon="📈", layout="wide")
+
+# Densidad visual compacta: reduce fuentes/márgenes de métricas, títulos y
+# separadores para que quepa más contenido en pantalla sin tanto scroll.
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    div[data-testid="stMetric"] {
+        padding: 0.3rem 0.6rem;
+    }
+    div[data-testid="stMetricValue"] {
+        font-size: 1.3rem;
+    }
+    div[data-testid="stMetricLabel"] {
+        font-size: 0.75rem;
+    }
+    div[data-testid="stMetricDelta"] {
+        font-size: 0.75rem;
+    }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0.5rem;
+    }
+    div[data-testid="stHorizontalBlock"] {
+        gap: 0.6rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
+    }
+    h3 {
+        font-size: 1.05rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    hr {
+        margin: 0.5rem 0;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 init_state()
 
 st.title("📈 NonKYC Trading Bot — Panel en vivo")
