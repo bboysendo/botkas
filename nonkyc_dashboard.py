@@ -243,7 +243,7 @@ def build_price_chart(
 # UI
 # --------------------------------------------------------------------------- #
 
-st.set_page_config(page_title="KASMAN · NonKYC Bot Dashboard", page_icon="📈", layout="wide")
+st.set_page_config(page_title="BOTKAS - NonKYC Trading Bot Dashboard", page_icon="📈", layout="wide")
 
 # Densidad visual compacta: reduce fuentes/márgenes de métricas, títulos y
 # separadores para que quepa más contenido en pantalla sin tanto scroll.
