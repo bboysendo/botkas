@@ -591,15 +591,6 @@ for col, symbol in zip(pair_cols, SYMBOLS):
 
 st.divider()
 
-st.markdown("**Historial de operaciones simuladas**")
-if wallet["trade_history"]:
-    trades_df = pd.DataFrame(wallet["trade_history"]).sort_values("time", ascending=False)
-    st.dataframe(trades_df, width="stretch")
-else:
-    st.caption("Todavía no se ha simulado ninguna operación BUY/SELL.")
-
-st.divider()
-
 # --- Órdenes LIMIT pendientes (recompra escalonada + órdenes manuales) ------
 st.subheader("🎯 Órdenes Limit Pendientes")
 if wallet["active_orders"]:
@@ -645,6 +636,17 @@ if wallet["active_orders"]:
             st.rerun()
 else:
     st.caption("No hay órdenes limit pendientes en este momento.")
+
+st.divider()
+
+st.markdown("**Historial de operaciones simuladas**")
+if wallet["trade_history"]:
+    trades_df = pd.DataFrame(wallet["trade_history"]).sort_values("time", ascending=False)
+    st.dataframe(trades_df, width="stretch")
+else:
+    st.caption("Todavía no se ha simulado ninguna operación BUY/SELL.")
+
+st.divider()
 
 with st.expander("Ver historial crudo de precios"):
     if history_df.empty:
