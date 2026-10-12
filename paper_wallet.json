@@ -1,0 +1,69 @@
+{
+  "initial_capital": 757.965,
+  "usdt_balance": 543.2814975,
+  "balances": {
+    "KAS_USDT": {
+      "quantity": 4177.461139896373,
+      "avg_entry_price": 0.04144403902325581
+    },
+    "ZKAS_USDT": {
+      "quantity": 16709.844559585494,
+      "avg_entry_price": 0.0024931793860465115
+    }
+  },
+  "active_orders": [],
+  "trade_history": [
+    {
+      "time": "2026-10-10T16:58:52",
+      "symbol": "KAS_USDT",
+      "side": "TAKE_PROFIT_SELL",
+      "price": 0.041593,
+      "quantity": 1250.0,
+      "usdt_amount": 51.99125,
+      "pnl": 0.0,
+      "usdt_balance_after": 500.0,
+      "ladder_order_ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "time": "2026-10-10T17:03:41",
+      "symbol": "ZKAS_USDT",
+      "side": "TAKE_PROFIT_SELL",
+      "price": 0.0025216,
+      "quantity": 5000.0,
+      "usdt_amount": 12.608,
+      "pnl": 0.10800000000000054,
+      "usdt_balance_after": 500.0,
+      "ladder_order_ids": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "time": "2026-10-10T17:36:06",
+      "symbol": "ZKAS_USDT",
+      "side": "LIMIT_BUY_FILLED",
+      "price": 0.002433344,
+      "quantity": 1709.8445595854926,
+      "usdt_amount": 4.160640000000001,
+      "pnl": null,
+      "usdt_balance_after": 500.0,
+      "order_id": 4
+    },
+    {
+      "time": "2026-10-12T19:51:04",
+      "symbol": "KAS_USDT",
+      "side": "LIMIT_BUY_FILLED",
+      "price": 0.040137244999999995,
+      "quantity": 427.46113989637314,
+      "usdt_amount": 17.1571125,
+      "pnl": null,
+      "usdt_balance_after": 500.0,
+      "order_id": 1
+    }
+  ]
+}
